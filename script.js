@@ -26,7 +26,7 @@
                 <h2>Second Puzzle</h2>
                 <p>Congratulations! You unlocked the second puzzle. Solve this one to proceed.</p>
                 <h4>Expert: Ryan</h4>
-                <p>The hills of AKS.</p>
+                <p>To eSCAPE this puzzle, you must name the hills of AKS.</p>
                 <input type="text" id="answer-2" placeholder="Enter your answer here">
                 <button onclick="checkAnswer(2)">Submit</button>
                 <p id="message-2" class="message"></p>

@@ -52,7 +52,7 @@
                 checkAnswer(3);
             });
         }
-        if (puzzleContainer == 4) {
+        if (puzzleNumber === 4) {
             puzzleContainer.innerHTML = `
                 <h2>Fourth Puzzle</h2>
                 <h4>Expert: Kyler</h4>

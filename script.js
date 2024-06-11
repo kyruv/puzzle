@@ -56,7 +56,7 @@
             puzzleContainer.innerHTML = `
                 <h2>Fourth Puzzle</h2>
                 <h4>Expert: Kyler</h4>
-                <p>What is a puzzle? (9781938570025:Day42)</p>
+                <p>What is a puzzle? (IgkygxYg4y:fde7f9ebd668b:Jg4a8)</p>
                 <input type="text" id="answer-4" placeholder="Enter your answer here">
                 <button id="submit-4">Submit</button>
                 <p id="message-4" class="message"></p>

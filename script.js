@@ -4,7 +4,8 @@
         1: ['TVRrMk56QXpNVGc9'], // base64 x2 encoding of '19670318'
         2: ['Wm1Wc1pHbHc='], // 'feldip'
         3: ['TWpNNk1UVT0=', 'TWpNNk1UWT0='], // '23:15' '23:16'
-        4: ['YzJocGJXSmhjMmhw'], // 'shimbashi'
+        4: ['WldGamFDQndaWEp6YjI0PQ==', 'WVNCd1pYSnpiMjQ9', 'Y0dWeWMyOXU='], // each person, 'a person', 'person'
+        5: ['YzJocGJXSmhjMmhw'], // 'shimbashi'
     };
 
     function checkAnswer(puzzleNumber) {
@@ -41,7 +42,7 @@
             puzzleContainer.innerHTML = `
                 <h2>Third Puzzle</h2>
                 <h4>Expert: Adam</h4>
-                <p>Grab a thesaurus then find the length of this small table production by a tabernacle equine. (separate measurements by :) </p>
+                <p>Grab a thesaurus then find the length of this small table production by a church pinto-foal. (separate measurements by :) </p>
                 <input type="text" id="answer-3" placeholder="Enter your answer here">
                 <button id="submit-3">Submit</button>
                 <p id="message-3" class="message"></p>
@@ -51,11 +52,11 @@
                 checkAnswer(3);
             });
         }
-        if (puzzleNumber === 4) {
+        if (puzzleContainer == 4) {
             puzzleContainer.innerHTML = `
                 <h2>Fourth Puzzle</h2>
-                <h4>Expert: Luebbers</h4>
-                <p>Replace REDACTED.</p>
+                <h4>Expert: Kyler</h4>
+                <p>What is a puzzle? (9781938570025:Day42)</p>
                 <input type="text" id="answer-4" placeholder="Enter your answer here">
                 <button id="submit-4">Submit</button>
                 <p id="message-4" class="message"></p>
@@ -64,10 +65,24 @@
             document.getElementById('submit-4').addEventListener('click', function () {
                 checkAnswer(4);
             });
+        }
+        if (puzzleNumber === 5) {
+            puzzleContainer.innerHTML = `
+                <h2>Fifth Puzzle</h2>
+                <h4>Expert: Luebbers</h4>
+                <p>Replace REDACTED.</p>
+                <input type="text" id="answer-5" placeholder="Enter your answer here">
+                <button id="submit-5">Submit</button>
+                <p id="message-5" class="message"></p>
+            `;
+            puzzleContainer.classList.remove('hidden');
+            document.getElementById('submit-5').addEventListener('click', function () {
+                checkAnswer(5);
+            });
 
             // Create the audio element dynamically with controls
             const audioElement = document.createElement('audio')
-            audioElement.src = 'fourth_clue.mp3';
+            audioElement.src = 'fifth_clue.mp3';
             audioElement.type = 'audio/mpeg';
             audioElement.controls = true; // Adds play, pause, and scrub controls
 
@@ -76,7 +91,7 @@
             audioWrapper.appendChild(audioElement);
 
             // Insert the audio element before the submit button
-            const answerLocation = document.getElementById('answer-4');
+            const answerLocation = document.getElementById('answer-5');
             puzzleContainer.insertBefore(audioWrapper, answerLocation);
         }
         // Additional puzzles can be added similarly.
